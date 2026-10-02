@@ -1,0 +1,89 @@
+.student-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.student-side {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--zh-surface);
+  border-right: 1px solid var(--zh-border);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.student-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px 12px;
+  border-bottom: 1px solid var(--zh-border);
+}
+
+.brand-bud {
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  background: linear-gradient(135deg, var(--zh-primary), #a8d4f5);
+  transform: rotate(-45deg);
+}
+
+.brand-name { font-weight: 700; font-size: 18px; color: var(--zh-primary-deep); }
+.brand-sub { font-size: 12px; color: var(--zh-text-mute); }
+
+.student-nav { display: flex; flex-direction: column; gap: 4px; }
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--zh-text-soft);
+}
+.nav-item:hover { background: var(--zh-primary-soft); }
+.nav-item.active { background: var(--zh-primary-soft); color: var(--zh-primary-dark); }
+.nav-name { font-weight: 600; font-size: 14px; }
+.nav-desc { font-size: 11px; color: var(--zh-text-mute); margin-top: 2px; }
+
+.stage-switch { margin-top: auto; border-top: 1px solid var(--zh-border); padding-top: 14px; }
+.stage-label { font-size: 12px; color: var(--zh-text-mute); margin-bottom: 8px; }
+.stage-btns { display: flex; gap: 6px; }
+.stage-btn {
+  flex: 1;
+  border: 1px solid var(--zh-border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 0;
+  font-size: 12px;
+  color: var(--zh-text-soft);
+}
+.stage-btn.active { background: var(--zh-primary); border-color: var(--zh-primary); color: #fff; }
+.stage-tip { font-size: 11px; color: var(--zh-text-mute); margin-top: 8px; line-height: 1.5; }
+
+.student-main { flex: 1; min-width: 0; }
+
+.page-head { margin-bottom: 20px; }
+.page-head h1 { font-size: 22px; }
+.page-head p { color: var(--zh-text-soft); font-size: 14px; margin-top: 4px; }
+
+/* 移动端：侧栏转为顶部导航 */
+@media (max-width: 760px) {
+  .student-shell { flex-direction: column; }
+  .student-side {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .student-nav { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  .nav-item { padding: 6px 10px; }
+  .nav-desc { display: none; }
+  .stage-switch { margin-top: 0; border-top: none; padding-top: 0; }
+}

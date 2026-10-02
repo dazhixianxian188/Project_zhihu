@@ -1,0 +1,89 @@
+.home {
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+  color: var(--zh-text);
+}
+
+/* 顶部条 */
+.home__topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 28px;
+  position: relative; z-index: 2;
+}
+.home__brand {
+  font-size: 24px; font-weight: 700;
+  color: var(--zh-primary-deep);
+  letter-spacing: 3px;
+}
+.home__nav { display: flex; gap: 8px; }
+.home__nav a {
+  font-size: 13px; font-weight: 600;
+  color: var(--zh-text-soft);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--zh-surface);
+  border: 1px solid var(--zh-border);
+  transition: all 0.2s;
+}
+.home__nav a:hover {
+  color: var(--zh-primary-dark);
+  border-color: var(--zh-primary);
+  background: var(--zh-primary-soft);
+}
+
+/* 主视觉 */
+.home__hero {
+  display: flex; align-items: center; justify-content: center;
+  gap: 48px;
+  padding: 60px 28px 80px;
+  position: relative; z-index: 2;
+}
+.home__hero-text { max-width: 420px; }
+.home__hero-text h1 {
+  font-size: 34px; line-height: 1.4;
+  color: var(--zh-text);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.home__hero-text p {
+  color: var(--zh-text-soft);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.home__cta-main {
+  display: inline-block;
+  background: var(--zh-primary);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(106, 169, 232, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.home__cta-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(106, 169, 232, 0.45);
+  background: var(--zh-primary-dark);
+}
+
+.home__hero-tree {
+  flex-shrink: 0;
+  filter: drop-shadow(0 16px 30px rgba(74, 143, 209, 0.18));
+}
+
+.home__footer {
+  text-align: center; color: var(--zh-text-mute);
+  font-size: 12px; letter-spacing: 6px; padding-top: 20px;
+  position: relative; z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .home__hero { flex-direction: column-reverse; gap: 20px; text-align: center; padding: 30px 20px 50px; }
+  .home__hero-text h1 { font-size: 26px; }
+}

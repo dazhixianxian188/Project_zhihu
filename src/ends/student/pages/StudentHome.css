@@ -1,0 +1,113 @@
+.shome { padding: 28px 24px 64px; max-width: 1000px; margin: 0 auto; position: relative; z-index: 2; }
+
+.shome__growth-tip {
+  display: block;
+  background: var(--zh-primary-soft);
+  color: var(--zh-primary-deep);
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.shome__hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(135deg, var(--zh-primary-soft), #fff);
+  border: 1px solid var(--zh-border);
+  border-radius: 22px;
+  padding: 36px 32px;
+}
+
+.shome__hero-text { flex: 1; }
+.shome__hero-text h1 { font-size: 30px; line-height: 1.35; color: var(--zh-text); }
+.shome__sub { color: var(--zh-primary); font-weight: 600; margin-top: 12px; letter-spacing: 1px; }
+.shome__note { color: var(--zh-text-soft); margin-top: 10px; max-width: 460px; }
+.shome__cta { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.shome__hero-tree { text-align: center; }
+.shome__stage { font-size: 13px; color: var(--zh-text-mute); margin-top: 4px; }
+
+.shome__scenes {
+  margin-top: 36px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.shome__scene {
+  position: relative;
+  border-radius: 18px;
+  padding: 34px 20px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  text-decoration: none;
+  background: var(--zh-surface);
+  border: 1px solid var(--zh-border);
+  box-shadow: var(--zh-shadow);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.shome__scene:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(74, 143, 209, 0.16);
+  border-color: var(--zh-primary);
+}
+.shome__scene-title { font-size: 17px; font-weight: 600; color: var(--zh-text); }
+.shome__scene-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--zh-primary);
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+.shome__scene:hover .shome__scene-dot { opacity: 1; transform: scale(1.4); }
+.shome__enter { display: inline-block; color: var(--zh-primary); font-weight: 600; margin-top: 6px; }
+
+.shome__ai { margin-top: 36px; }
+.shome__ai-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: var(--zh-surface);
+  border: 1px solid var(--zh-border);
+  border-radius: 16px;
+  padding: 26px;
+}
+.shome__ai-card h2 { font-size: 19px; margin-bottom: 8px; }
+.shome__ai-card p { color: var(--zh-text-soft); font-size: 14px; line-height: 1.7; }
+.shome__ai-tip { color: var(--zh-primary); font-weight: 600; margin-top: 8px; }
+
+.shome__growth {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 16px;
+}
+.shome__growth-left { text-align: center; }
+.shome__growth-left h2 { font-size: 20px; margin-bottom: 10px; text-align: left; }
+.shome__tree-thumb { display: inline-block; }
+.shome__recent { color: var(--zh-text-soft); font-size: 14px; margin: 8px 0; }
+.shome__growth-right { display: flex; flex-direction: column; gap: 16px; }
+.shome__growth-right h3 { font-size: 15px; margin-bottom: 12px; }
+.shome__reminders { display: flex; flex-direction: column; gap: 10px; }
+.shome__reminder {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 12px; border-radius: 10px;
+  background: var(--zh-primary-soft);
+}
+.shome__reminder b { font-size: 13px; color: var(--zh-primary-dark); }
+.shome__reminder span { font-size: 13px; color: var(--zh-text-soft); }
+.shome__today { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.shome__today-item {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 12px; border-radius: 10px;
+  border: 1px solid var(--zh-border); background: #fff;
+}
+.shome__today-item b { font-size: 13px; }
+.shome__today-item span { font-size: 12px; color: var(--zh-text-soft); }
+.shome__today-item em { font-style: normal; font-size: 12px; color: var(--zh-primary); font-weight: 600; }
+
+@media (max-width: 720px) {
+  .shome__hero { flex-direction: column; text-align: center; }
+  .shome__hero-text h1 { font-size: 24px; }
+  .shome__ai-card { flex-direction: column; text-align: center; }
+  .shome__scenes { grid-template-columns: 1fr; }
+  .shome__growth { grid-template-columns: 1fr; }
+}

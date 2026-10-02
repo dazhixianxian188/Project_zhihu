@@ -1,0 +1,63 @@
+.tree__layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+}
+
+.tree__center { text-align: center; padding: 28px 20px; }
+.tree__center svg { display: block; margin: 0 auto; }
+.tree__stage-name { font-size: 20px; font-weight: 700; color: var(--zh-primary-dark); margin-top: 8px; }
+.tree__stage-desc { color: var(--zh-text-soft); font-size: 14px; margin-top: 4px; }
+
+.tree__stages { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+.tree__stage-chip {
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--zh-border);
+  background: #fff;
+  font-size: 12px;
+  color: var(--zh-text-mute);
+}
+.tree__stage-chip.active { background: var(--zh-primary); border-color: var(--zh-primary); color: #fff; }
+
+.tree__side { display: flex; flex-direction: column; gap: 16px; }
+
+.tree__tasks { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.tree__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--zh-border);
+  border-radius: 10px;
+}
+.tree__task.done { background: var(--zh-primary-soft); border-color: var(--zh-primary); }
+.tree__task div { display: flex; flex-direction: column; gap: 2px; }
+.tree__task b { font-size: 13px; }
+.tree__task span { font-size: 12px; color: var(--zh-text-soft); }
+
+.tree__counts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.tree__count { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--zh-primary-soft); color: var(--zh-primary-dark); }
+
+.tree__timeline { display: flex; flex-direction: column; gap: 14px; }
+.tree__event { display: flex; gap: 12px; }
+.tree__event-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--zh-primary);
+  margin-top: 6px;
+}
+.tree__event b { font-size: 14px; }
+.tree__event-when { font-size: 12px; color: var(--zh-text-mute); margin-left: 8px; }
+.tree__event p { font-size: 13px; color: var(--zh-text-soft); margin: 2px 0; }
+.tree__event-note { color: var(--zh-primary); font-weight: 600; }
+
+.tree__principle b { color: var(--zh-primary-dark); }
+.tree__note { color: var(--zh-text-mute); font-size: 13px; }
+
+@media (max-width: 820px) {
+  .tree__layout { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,4 @@
+.perm__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.perm__card h3 { font-size: 16px; margin-bottom: 10px; }
+.perm__label { font-size: 13px; font-weight: 700; color: var(--zh-primary-dark); margin: 10px 0 6px; }
+.perm__label--restrict { color: var(--zh-danger); }

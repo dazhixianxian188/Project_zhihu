@@ -1,0 +1,17 @@
+.re__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: var(--zh-text-soft); font-size: 14px; }
+.re__filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.re__chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--zh-border);
+  background: #fff;
+  font-size: 13px;
+  color: var(--zh-text-soft);
+}
+.re__chip.active { background: var(--zh-primary); border-color: var(--zh-primary); color: #fff; }
+
+.re__list { display: flex; flex-direction: column; gap: 12px; }
+.re__item { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.re__item-main { display: flex; flex-direction: column; gap: 4px; }
+.re__meta { font-size: 12px; color: var(--zh-text-mute); }
+.re__status { padding: 4px 12px; border-radius: 999px; border: 1px solid; font-size: 12px; font-weight: 600; white-space: nowrap; }

@@ -1,0 +1,29 @@
+.zhiya {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: zhiya-sway 6s ease-in-out infinite;
+}
+
+.zhiya svg { display: block; }
+
+@keyframes zhiya-sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.zy-sway { transform-box: fill-box; transform-origin: 50% 90%; animation: zhiya-body 7s ease-in-out infinite; }
+@keyframes zhiya-body {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.02); }
+}
+
+.zy-breath { animation: zhiya-glow 7s ease-in-out infinite; }
+@keyframes zhiya-glow {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zhiya, .zy-sway, .zy-breath { animation: none; }
+}

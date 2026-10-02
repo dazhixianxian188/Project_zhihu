@@ -1,0 +1,82 @@
+.ai-output {
+  border: 1px solid var(--zh-border);
+  border-radius: 14px;
+  background: var(--zh-surface);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ai-output__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--zh-border);
+  padding-bottom: 12px;
+}
+
+.ai-output__buddy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-output__greeting {
+  font-size: 13px;
+  color: var(--zh-primary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ai-output__title {
+  font-weight: 600;
+  color: var(--zh-text);
+  font-size: 16px;
+}
+
+.ai-output__section h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--zh-primary);
+}
+
+.ai-output__section p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--zh-text-soft);
+}
+
+.ai-output__section ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: var(--zh-text-soft);
+}
+
+.ai-output__section--autonomy {
+  background: var(--zh-autonomy-bg);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.ai-output__section--autonomy h4 {
+  color: var(--zh-autonomy);
+}
+
+.ai-output__appeal {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--zh-border);
+  font-size: 13px;
+  color: var(--zh-text-mute);
+}
+.ai-output__appeal button {
+  background: none;
+  border: none;
+  color: var(--zh-primary);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  padding: 0;
+}

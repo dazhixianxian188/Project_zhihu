@@ -1,0 +1,10 @@
+.rec__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.rec__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.rec__head h3 { font-size: 16px; }
+
+.rec__timeline .tree__timeline { display: flex; flex-direction: column; gap: 14px; }
+.rec__timeline .tree__event { display: flex; gap: 12px; }
+.rec__timeline .tree__event-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--zh-primary); margin-top: 6px; }
+.rec__timeline .tree__event b { font-size: 14px; }
+.rec__timeline .tree__event-when { font-size: 12px; color: var(--zh-text-mute); margin-left: 8px; }
+.rec__timeline .tree__event p { font-size: 13px; color: var(--zh-text-soft); margin: 2px 0; }

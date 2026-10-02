@@ -1,0 +1,7 @@
+.dg__principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.dg__p { padding: 12px; border-radius: 10px; background: var(--zh-primary-soft); display: flex; flex-direction: column; gap: 4px; }
+.dg__p b { font-size: 14px; color: var(--zh-primary-dark); }
+.dg__p span { font-size: 12px; color: var(--zh-text-soft); line-height: 1.5; }
+.dg__table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dg__table th, .dg__table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--zh-border); }
+.dg__table th { color: var(--zh-text-mute); font-weight: 600; }

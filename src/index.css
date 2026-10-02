@@ -1,0 +1,224 @@
+/* ============================================================
+   知护 · 全局基础样式与设计令牌（知芽品牌基础色）
+   后续段将在此基础上做视觉升级，不破坏功能。
+   ============================================================ */
+:root {
+  /* 知芽主色 —— 柔和浅蓝，温暖治愈（心理平台质感） */
+  --zh-primary: #6aa9e8;
+  --zh-primary-soft: #eaf3fd;
+  --zh-primary-dark: #4a8fd1;
+  --zh-primary-deep: #3568a8;
+
+  /* 暖色点缀 */
+  --zh-warm: #f4b860;
+  --zh-warm-soft: #fdf3e2;
+
+  /* 功能色 */
+  --zh-info: #6aa9e8;
+  --zh-warning: #e0a23c;
+  --zh-danger: #e07a7a;
+  --zh-autonomy: #8aa5e0;
+  --zh-autonomy-bg: #eef2fc;
+
+  /* 中性色 —— 偏暖浅灰 */
+  --zh-text: #2b3445;
+  --zh-text-soft: #5f6b7c;
+  --zh-text-mute: #98a2b2;
+  --zh-bg: #f3f6fb;
+  --zh-surface: #ffffff;
+  --zh-border: #e3e9f2;
+
+  --zh-radius: 16px;
+  --zh-shadow: 0 6px 22px rgba(74, 143, 209, 0.08);
+
+  --zh-sans: system-ui, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif;
+  /* 标题字体：更有设计感，柔和圆润 */
+  --zh-display: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif;
+
+  font: 15px/1.6 var(--zh-sans);
+  color: var(--zh-text);
+  background: var(--zh-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--zh-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: var(--zh-text);
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--zh-display);
+  letter-spacing: 0.5px;
+}
+h1 { font-size: 26px; }
+h2 { font-size: 20px; }
+h3 { font-size: 17px; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------- 通用布局 ---------- */
+.zh-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.page-head { margin-bottom: 20px; animation: zh-fade-up 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+.page-head h1 { font-size: 24px; color: var(--zh-text); }
+.page-head p { color: var(--zh-text-soft); font-size: 14px; margin-top: 6px; }
+
+.zh-card {
+  background: var(--zh-surface);
+  border: 1px solid var(--zh-border);
+  border-radius: var(--zh-radius);
+  padding: 20px;
+  box-shadow: var(--zh-shadow);
+  animation: zh-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+}
+.zh-card:hover { box-shadow: 0 10px 26px rgba(74, 143, 209, 0.14); }
+
+@media (prefers-reduced-motion: reduce) {
+  .zh-card, .page-head { animation: none; }
+}
+
+.zh-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* 可点击的功能卡片 */
+.gr__card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+}
+.gr__card:hover { border-color: var(--zh-primary); }
+
+.zh-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--zh-primary-soft);
+  color: var(--zh-primary-dark);
+}
+
+/* ---------- 按钮与表单 ---------- */
+.zh-btn-primary {
+  background: var(--zh-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.zh-btn-primary:hover { background: var(--zh-primary-dark); }
+
+.zh-btn-ghost {
+  background: #fff;
+  color: var(--zh-text-soft);
+  border: 1px solid var(--zh-border);
+  border-radius: 10px;
+  padding: 9px 16px;
+  font-size: 14px;
+}
+.zh-btn-ghost:hover { border-color: var(--zh-primary); color: var(--zh-primary); }
+
+.zh-input {
+  padding: 9px 12px;
+  border: 1px solid var(--zh-border);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.fact-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.9;
+  color: var(--zh-text-soft);
+  font-size: 14px;
+}
+.fact-list li b { color: var(--zh-text); }
+
+/* ---------- 成长联动块（场景→成长树） ---------- */
+.grow-link { border-left: 4px solid var(--zh-primary); }
+.grow-link h3 { font-size: 15px; margin-bottom: 6px; }
+.grow-link p { color: var(--zh-text-soft); font-size: 13px; margin-bottom: 12px; }
+.grow-link button:disabled { opacity: 0.6; cursor: default; }
+.grow-link .grow-done { color: var(--zh-primary); font-weight: 600; font-size: 13px; margin-top: 8px; }
+
+/* ---------- 柔和动态：入场与呼吸 ---------- */
+@keyframes zh-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zh-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zh-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes zh-breath {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+.zh-anim-up { animation: zh-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.zh-anim-in { animation: zh-fade-in 0.8s ease both; }
+.zh-float { animation: zh-float 6s ease-in-out infinite; }
+.zh-breath { animation: zh-breath 7s ease-in-out infinite; }
+
+/* 背景柔光渐变，温暖治愈 */
+.zh-ambient {
+  position: relative;
+  overflow: hidden;
+}
+.zh-ambient::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -80px;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(106,169,232,0.18), transparent 70%);
+  pointer-events: none;
+  animation: zh-breath 9s ease-in-out infinite;
+}
+.zh-ambient::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,184,96,0.14), transparent 70%);
+  pointer-events: none;
+  animation: zh-breath 11s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zh-anim-up, .zh-anim-in, .zh-float, .zh-breath,
+  .zh-ambient::before, .zh-ambient::after { animation: none; }
+}

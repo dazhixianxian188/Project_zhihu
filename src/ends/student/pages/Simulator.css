@@ -1,0 +1,55 @@
+.sim__switcher { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.sim__stage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--zh-border);
+  border-radius: 14px;
+  background: var(--zh-surface);
+  text-align: left;
+  transition: all 0.2s;
+}
+.sim__stage b { color: var(--zh-text); }
+.sim__stage span { font-size: 13px; color: var(--zh-text-soft); }
+.sim__stage em { font-style: normal; font-size: 12px; color: var(--zh-text-mute); }
+.sim__stage.active { border-color: var(--zh-primary); background: var(--zh-primary-soft); box-shadow: var(--zh-shadow); }
+
+.sim__grid { display: grid; grid-template-columns: 280px 1fr; gap: 16px; margin-bottom: 20px; }
+.sim__buddy { text-align: center; }
+.sim__buddy-main { display: flex; justify-content: center; padding: 10px 0; }
+
+.sim__demo-label { font-weight: 600; margin: 8px 0 10px; color: var(--zh-text); }
+.sim__demo-source { margin-bottom: 16px; color: var(--zh-text-soft); }
+
+.sim__promise h3 { color: var(--zh-primary-dark); }
+.sim__forbid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.sim__forbid-item {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #ffecec;
+  color: var(--zh-danger);
+  font-size: 12px;
+}
+.sim__muted { color: var(--zh-text-mute); font-size: 13px; }
+
+.sim__compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.sim__compare-card {
+  padding: 14px;
+  border: 1px solid var(--zh-border);
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sim__compare-card.active { border-color: var(--zh-primary); background: var(--zh-primary-soft); }
+.sim__compare-card p { font-size: 13px; color: var(--zh-text-soft); margin: 0; }
+.sim__compare-card span { font-size: 12px; color: var(--zh-primary); font-weight: 600; }
+
+@media (max-width: 720px) {
+  .sim__switcher { grid-template-columns: 1fr; }
+  .sim__grid { grid-template-columns: 1fr; }
+}

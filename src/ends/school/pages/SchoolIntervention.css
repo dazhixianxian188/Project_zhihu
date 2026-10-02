@@ -1,0 +1,5 @@
+.si__list { display: flex; flex-direction: column; gap: 14px; }
+.si__head { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.si__time { font-size: 12px; color: var(--zh-text-mute); }
+.si__item p { font-size: 14px; color: var(--zh-text-soft); margin: 3px 0; }
+.si__item b { color: var(--zh-text); }

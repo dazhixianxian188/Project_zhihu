@@ -1,0 +1,16 @@
+.assist { display: grid; grid-template-columns: 220px 1fr; gap: 16px; }
+.assist__side { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.assist__greeting { color: var(--zh-primary); font-weight: 600; }
+.assist__muted { color: var(--zh-text-mute); font-size: 13px; }
+
+.assist__chat { display: flex; flex-direction: column; min-height: 360px; }
+.assist__messages { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.assist__msg { max-width: 80%; padding: 10px 14px; border-radius: 14px; font-size: 14px; line-height: 1.6; }
+.assist__msg--ai { background: var(--zh-primary-soft); color: var(--zh-text); align-self: flex-start; }
+.assist__msg--me { background: var(--zh-primary); color: #fff; align-self: flex-end; }
+.assist__input { display: flex; gap: 10px; }
+.assist__input input { flex: 1; }
+
+@media (max-width: 720px) {
+  .assist { grid-template-columns: 1fr; }
+}

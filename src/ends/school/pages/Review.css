@@ -1,0 +1,9 @@
+.rv__list { display: flex; flex-direction: column; gap: 14px; }
+.rv__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 10px; }
+.rv__status { padding: 3px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.rv__status--pending { background: #fff6e5; color: #a86a00; }
+.rv__status--confirmed { background: var(--zh-primary-soft); color: var(--zh-primary-dark); }
+.rv__status--resolved { background: #eef; color: #5b6472; }
+.rv__item p { font-size: 14px; color: var(--zh-text-soft); margin: 4px 0; }
+.rv__caution { color: #a86a00 !important; }
+.rv__actions { display: flex; gap: 10px; margin-top: 10px; }

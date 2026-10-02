@@ -1,0 +1,5 @@
+.iv__list { display: flex; flex-direction: column; gap: 14px; }
+.iv__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.iv__time { margin-left: auto; font-size: 12px; color: var(--zh-text-mute); }
+.iv__item p { font-size: 14px; color: var(--zh-text-soft); margin: 3px 0; }
+.iv__item b { color: var(--zh-text); }

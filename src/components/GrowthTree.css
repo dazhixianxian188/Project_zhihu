@@ -1,0 +1,90 @@
+.gtree { display: inline-flex; line-height: 0; }
+.gtree svg { display: block; }
+
+/* 生长淡入 */
+.gt-grow { animation: gt-pop 1s cubic-bezier(0.22, 1, 0.36, 1); }
+@keyframes gt-pop {
+  from { transform: scale(0.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 草地轻摆 */
+.gt-sway { animation: gt-sway 8s ease-in-out infinite; }
+@keyframes gt-sway {
+  0%, 100% { transform: rotate(-0.7deg); }
+  50% { transform: rotate(0.7deg); }
+}
+
+/* 枝条轻摆 */
+.gt-sway2 { animation: gt-sway2 7s ease-in-out infinite; transform-box: fill-box; transform-origin: top center; }
+@keyframes gt-sway2 {
+  0%, 100% { transform: rotate(-1.2deg); }
+  50% { transform: rotate(1.2deg); }
+}
+
+/* 叶片轻颤 */
+.gt-leaf { animation: gt-leaf 5s ease-in-out infinite; }
+@keyframes gt-leaf {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.04); }
+}
+
+/* 花朵绽放 */
+.gt-bloom { animation: gt-bloom 4.5s ease-in-out infinite; }
+@keyframes gt-bloom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* 垂挂物轻晃（果实、灯笼） */
+.gt-bob { animation: gt-bob 6s ease-in-out infinite; }
+@keyframes gt-bob {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+/* 云雾漂移 */
+.gt-cloud { animation: gt-cloud 26s linear infinite; }
+@keyframes gt-cloud {
+  from { transform: translateX(-30px); opacity: 0; }
+  15% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  to { transform: translateX(60px); opacity: 0; }
+}
+
+/* 阳光呼吸 */
+.gt-sun { animation: gt-glow 9s ease-in-out infinite; }
+@keyframes gt-glow {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+/* 光斑闪烁 */
+.gt-spark { animation: gt-spark 3.5s ease-in-out infinite; }
+@keyframes gt-spark {
+  0%, 100% { opacity: 0.2; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 蝴蝶飘飞 */
+.gt-butterfly { animation: gt-butterfly 9s ease-in-out infinite; }
+@keyframes gt-butterfly {
+  0% { transform: translate(250px, 150px) rotate(-6deg); }
+  25% { transform: translate(210px, 120px) rotate(6deg); }
+  50% { transform: translate(170px, 150px) rotate(-6deg); }
+  75% { transform: translate(210px, 180px) rotate(6deg); }
+  100% { transform: translate(250px, 150px) rotate(-6deg); }
+}
+
+/* 小鸟游弋 */
+.gt-bird { animation: gt-bird 12s ease-in-out infinite; }
+@keyframes gt-bird {
+  0% { transform: translate(70px, 120px); }
+  50% { transform: translate(300px, 90px); }
+  100% { transform: translate(70px, 120px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gt-sway, .gt-sway2, .gt-leaf, .gt-bloom, .gt-bob,
+  .gt-cloud, .gt-sun, .gt-spark, .gt-butterfly, .gt-bird { animation: none; }
+}

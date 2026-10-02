@@ -1,0 +1,7 @@
+.demos__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.demos__card { display: flex; flex-direction: column; gap: 8px; transition: transform 0.15s; }
+.demos__card:hover { transform: translateY(-3px); box-shadow: var(--zh-shadow); }
+.demos__no { font-size: 12px; color: var(--zh-primary); font-weight: 700; }
+.demos__card h3 { font-size: 17px; }
+.demos__card p { color: var(--zh-text-soft); font-size: 13px; line-height: 1.6; }
+.demos__enter { color: var(--zh-primary); font-weight: 600; margin-top: auto; }
